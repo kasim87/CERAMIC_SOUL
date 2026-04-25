@@ -1,0 +1,36 @@
+.touch {
+    padding-top: 60px;
+    &__wrapper {
+        margin-top: 60px;
+    }
+    &__img {
+        display: none;
+    }
+    &__col {
+        margin-top: 60px;
+    }
+}
+
+@media (min-width: 768px) {
+    .touch {
+        padding: 60px 25px 0 50px;
+        &__wrapper {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .touch {
+        padding: 60px 30px 0 30px;
+        &__img {
+            display: block;
+        }
+        &__wrapper {
+            margin-top: 80px;
+        }
+        &__col {
+            padding: 0 20px;
+        }
+    }
+}
