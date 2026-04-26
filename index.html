@@ -109,13 +109,54 @@
       <div class="container">
         <h2 class="title-h2">get in touch</h2>
         <div class="pure-g touch__wrapper">
-          <div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-2-5">
-            <img src="/src/img/form/tea.jpg" alt="tea" class="touch__img">
+          <div class="pure-u-1 pure-u-lg-2-5">
+            <img src="/src/img/form/tea.jpg" alt="tea" class="touch__img" />
           </div>
-          <div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-3-5">
+          <div class="pure-u-1 pure-u-lg-3-5">
             <form action="#" class="touch__form">
-              
+              <fieldset>
+                <div class="touch__input-block">
+                  <label for="name">Name</label>
+                  <input
+                    class="touch__input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="name"
+                  />
+                </div>
+                <div class="touch__input-block">
+                  <label for="email">email</label>
+                  <input
+                    class="touch__input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="email"
+                  />
+                </div>
+              </fieldset>
+              <label for="question">Your question</label>
+              <textarea
+                class="touch__textarea"
+                name="question"
+                id="question"
+                placeholder="question"
+              ></textarea>
+              <label class="touch__label" for="checkbox">
+                <input
+                  class="touch__checkbox"
+                  type="checkbox"
+                  id="checkbox"
+                  name="checkbox"
+                />
+                I agree with the <a href="#">Terms</a>
+              </label>
+
+              <button class="touch__btn btn-send">send request</button>
+            </form>
           </div>
+          <img src="/src/img/form/vase.png" alt="vase" class="touch__decor" />
         </div>
       </div>
     </section>
