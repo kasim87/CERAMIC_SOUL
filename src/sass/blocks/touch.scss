@@ -84,10 +84,11 @@
 
 @media screen and (min-width: 768px) {
     .touch {
-        &__wrapper {
-            position: relative;
-        }
+        // &__wrapper {
+        //     position: relative;
+        // }
         &__form {
+            position: relative;
             width: 300px;
             padding-left: 25px;
         }
@@ -130,7 +131,7 @@
             height: 356px;
         }
         &__form {
-            width: 100%;
+            width: auto;
             padding-left: 145px;
         }
         fieldset {
@@ -144,7 +145,7 @@
             width: 300px;
         }
         &__decor {
-            right: 350px;
+            right: 75px;
         }
 	}
 }
