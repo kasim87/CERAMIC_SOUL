@@ -23,6 +23,21 @@
     }
 }
 
+.btn-submit {
+    @include button;
+    width: 90px;
+    height: 40px;
+    color: $light;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-transform: uppercase;
+    &:disabled {
+        color: $ul-disable;
+        border: 1px solid $ul-disable;
+    }
+}
+
 @media (min-width: 1200px) {
     .btn-default {
         &:hover {
