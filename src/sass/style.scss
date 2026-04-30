@@ -1,14 +1,16 @@
-@use '/src/sass/libs/modern-normalize.min.css';
-@use '/src/sass/libs/fontello.css';
+@use "/src/sass/libs/modern-normalize.min.css";
+@use "/src/sass/libs/fontello.css";
 
-@use '/src/sass/base/basic.scss';
+@use "/src/sass/base/basic.scss";
 
-@use '/src/sass/blocks/header.scss';
-@use '/src/sass/blocks/promo.scss';
-@use '/src/sass/blocks/activities.scss';
-@use '/src/sass/blocks/touch.scss';
-@use '/src/sass/blocks/works.scss';
-@use '/src/sass/blocks/footer.scss';
+@use "/src/sass/blocks/header.scss";
+@use "/src/sass/blocks/promo.scss";
+@use "/src/sass/blocks/activities.scss";
+@use "/src/sass/blocks/touch.scss";
+@use "/src/sass/blocks/works.scss";
+@use "/src/sass/blocks/footer.scss";
 
-@use '/src/sass/ul/titles.scss';
-@use '/src/sass/ul/buttons.scss';
+@use "/src/sass/ul/titles.scss";
+@use "/src/sass/ul/buttons.scss";
+
+@use "/src/sass/blocks/catalog.scss";

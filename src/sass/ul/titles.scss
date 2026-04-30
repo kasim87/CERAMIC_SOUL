@@ -1,39 +1,42 @@
-@use '/src/sass/base/variables.scss' as *;
-@use '/src/sass/base/mixins.scss' as *;
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
 
 .title-h1-italic {
-    @include title;
-    font-style: Italic;
-    font-size: 24px;
+  @include title;
+  font-style: Italic;
+  font-size: 24px;
 }
 
+.title-h1,
 .title-h2 {
-    @include title;
-    font-size: 32px;
+  @include title;
+  font-size: 32px;
 }
 
 .title-h3 {
-    @include title;
-    font-size: 20px;
+  @include title;
+  font-size: 20px;
 }
 
 @media (min-width: 768px) {
-    .title-h2 {
-        font-size: 36px;
-    }
-    .title-h3 {
-        font-size: 24px;
-    }
+  .title-h1,
+  .title-h2 {
+    font-size: 36px;
+  }
+  .title-h3 {
+    font-size: 24px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .title-h2 {
-        font-size: 40px;
-    }
+  .title-h1,
+  .title-h2 {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 1920px) {
-    .title-h1-italic {
-        font-size: 32px;
-    }
+  .title-h1-italic {
+    font-size: 32px;
+  }
 }
