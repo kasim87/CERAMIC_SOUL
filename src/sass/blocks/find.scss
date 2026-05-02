@@ -1,0 +1,20 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.find {
+  padding-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .find {
+  }
+}
+
+@media (min-width: 1200px) {
+  .find {
+  }
+}
+
+@media (min-width: 1919px) {
+  .find {
+  }
+}
