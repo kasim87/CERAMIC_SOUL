@@ -1,152 +1,170 @@
-@use '/src/sass/base/variables.scss' as *;
+@use "/src/sass/base/variables.scss" as *;
 
 .touch {
-    padding-top: 60px;
-    &__wrapper {
-        margin-top: 60px;
+  padding-top: 60px;
+  &__wrapper {
+    margin-top: 60px;
+  }
+  &__img {
+    display: none;
+  }
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  label {
+    display: block;
+    color: $dark;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    &:nth-child(2) {
+      margin-top: 8px;
     }
-    &__img {
-        display: none;
+  }
+  &__input {
+    width: 100%;
+    height: 48px;
+    padding: 10px 15px;
+    color: $dark;
+    box-sizing: border-box;
+    border: 1px solid rgba(226, 225, 229, 1);
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 1);
+    &:focus {
+      border: none;
+      border: 1px solid $dark;
     }
-    fieldset {
-        border: none;
-        padding: 0;
-        margin: 0;
+    &::placeholder {
+      color: $ul-disable;
+      font-size: 14px;
     }
-    label {
-        display: block;
-        color: $dark;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 28px;
-        &:nth-child(2) {
-            margin-top: 8px;
-        }
-    }
-    &__input {
-        width: 100%;
-        height: 48px;
-        padding: 10px 15px;
-        color: $dark;
-        box-sizing: border-box;
-        border: 1px solid rgba(226, 225, 229, 1);
-        border-radius: 2px;
-        background: rgba(255, 255, 255, 1);
-        &:focus {
-            border: none;
-            border: 1px solid $dark;
-        }
-        &::placeholder {
-            color: $ul-disable;
-            font-size: 14px;
-        }
-    }
-    &__textarea {
-        width: 100%;
-        height: 132px;
-        padding: 10px 15px;
-        color: $dark;
-        box-sizing: border-box;
-        border: 1px solid rgba(226, 225, 229, 1);
-        border-radius: 2px;
-        background: rgba(255, 255, 255, 1);
+  }
+  &__textarea {
+    width: 100%;
+    height: 132px;
+    padding: 10px 15px;
+    color: $dark;
+    box-sizing: border-box;
+    border: 1px solid rgba(226, 225, 229, 1);
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 1);
 
-        &:focus {
-            border: none;
-            border: 1px solid $dark;
-        }
+    &:focus {
+      border: none;
+      border: 1px solid $dark;
+    }
 
-        &::placeholder {
-            color: $ul-disable;
-            font-size: 14px;
-        }
+    &::placeholder {
+      color: $ul-disable;
+      font-size: 14px;
     }
-    &__label {
-        margin-top: 20px;
-        a {
-            color: rgba(162, 45, 198, 1);
-            text-decoration: none;
-        }
+  }
+  &__label {
+    margin-top: 20px;
+    a {
+      color: rgba(162, 45, 198, 1);
+      text-decoration: none;
     }
-    &__checkbox {
-        vertical-align: middle;
-        margin-right: 15px;
-        width: 15px;
-        height: 15px;
-    }
-    &__btn {
-        margin-top: 40px;
-    }
-    &__decor {
-        display: none;
-    }
+  }
+  &__checkbox {
+    vertical-align: middle;
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+  }
+  &__btn {
+    margin-top: 40px;
+  }
+  &__decor {
+    display: none;
+  }
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.checkbox-error-message {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
-    .touch {
-        // &__wrapper {
-        //     position: relative;
-        // }
-        &__form {
-            position: relative;
-            width: 300px;
-            padding-left: 25px;
-        }
-        &__decor {
-            display: block;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
+  .touch {
+    &__form {
+      position: relative;
+      width: 300px;
+      padding-left: 25px;
     }
+    &__decor {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      animation: slideInRight 0.8s ease-out 0.4s both;
+      transform-origin: bottom right;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        animation: sway 3s infinite;
+      }
+    }
+  }
 }
 
 @media (min-width: 1200px) {
-    .touch {
-        &__img {
-            display: block;
-            width: 550px;
-			height: 342px;
-			object-fit: cover;
-			box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
-            padding-left: 30px;
-        }
-        &__form {
-            padding-left: 20px;
-        }
-        &__input {
-            &:focus {
-                border: none;
-                border: 1px solid $dark;
-            }
-        }
+  .touch {
+    &__img {
+      display: block;
+      width: 550px;
+      height: 342px;
+      object-fit: cover;
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+      padding-left: 30px;
     }
+    &__form {
+      padding-left: 20px;
+    }
+    &__input {
+      &:focus {
+        border: none;
+        border: 1px solid $dark;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1920px) {
-	.touch {
-        padding-top: 100px;
-		&__img {
-            width: 100%;
-            height: 356px;
-        }
-        &__form {
-            width: auto;
-            padding-left: 145px;
-        }
-        fieldset {
-            display: flex;
-            column-gap: 45px;
-        }
-        &__label,
-        &__check-block,
-        &__input,
-        &__textarea {
-            width: 300px;
-        }
-        &__decor {
-            right: 75px;
-        }
-	}
+  .touch {
+    padding-top: 100px;
+    &__img {
+      width: 100%;
+      height: 356px;
+    }
+    &__form {
+      width: auto;
+      padding-left: 145px;
+    }
+    fieldset {
+      display: flex;
+      column-gap: 45px;
+    }
+    &__label,
+    &__check-block,
+    &__input,
+    &__textarea {
+      width: 300px;
+    }
+    &__decor {
+      right: 75px;
+      animation: slideInUp 0.9s ease-out 0.5s both;
+    }
+  }
 }
-

@@ -6,6 +6,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import JustValidate from "just-validate";
 
 import "../sass/style.scss";
 
@@ -67,4 +68,143 @@ try {
 
   // Показываем первый контент при загрузке
   contents.forEach((c, i) => (c.style.display = i === 0 ? "flex" : "none"));
+} catch (e) {}
+
+try {
+  const validatorTouch = new JustValidate(".touch__form");
+
+  validatorTouch
+    .addField(
+      "#name",
+      [
+        {
+          rule: "required",
+          errorMessage: "Please fill the name",
+        },
+        {
+          rule: "minLength",
+          value: 2,
+          errorMessage: "Minimum 2 chars!",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#name")
+          .querySelector(".error-message"),
+      },
+    )
+    .addField(
+      "#email",
+      [
+        {
+          rule: "required",
+          errorMessage: "Please fill the email",
+        },
+        {
+          rule: "email",
+          errorMessage: "Please enter a valid email",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#email")
+          .querySelector(".error-message"),
+      },
+    )
+    .addField(
+      "#question",
+      [
+        {
+          rule: "required",
+          errorMessage: "Please fill the question",
+        },
+        {
+          rule: "minLength",
+          value: 5,
+          errorMessage: "Minimum 5 chars!",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#question")
+          .querySelector(".error-message"),
+      },
+    )
+    .addField(
+      "#checkbox",
+      [
+        {
+          rule: "required",
+          errorMessage: "Please accept the terms",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#checkbox")
+          .querySelector(".checkbox-error-message"),
+      },
+    )
+    .onSuccess((event) => {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      fetch("https://httpbin.org/post", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Success", data);
+          form.reset();
+        });
+    });
+} catch (e) {}
+
+try {
+  const validatorFooter = new JustValidate(".footer__form");
+
+  validatorFooter
+    .addField(
+      "#footer__input",
+      [
+        {
+          rule: "required",
+        },
+        {
+          rule: "email",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#footer__input")
+          .parentElement.querySelector(".email-error-message"),
+      },
+    )
+    .addField(
+      "#footer__checkbox",
+      [
+        {
+          rule: "required",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#footer__checkbox")
+          .parentElement.parentElement.querySelector(".check-error-message"),
+      },
+    )
+    .onSuccess((event) => {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      fetch("https://httpbin.org/post", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Success", data);
+          form.reset();
+        });
+    });
 } catch (e) {}

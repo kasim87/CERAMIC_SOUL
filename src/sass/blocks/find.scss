@@ -2,19 +2,49 @@
 
 .find {
   padding-top: 60px;
+  &__wrapperMap {
+    margin-top: 60px;
+    iframe {
+      width: 100%;
+      height: 206px;
+    }
+  }
 }
 
 @media (min-width: 768px) {
   .find {
+    &__wrapperMap {
+      padding: 0 30px;
+      iframe {
+        height: 408px;
+      }
+    }
   }
 }
 
 @media (min-width: 1200px) {
   .find {
+    &__wrapperMap {
+      padding: 0;
+      iframe {
+        display: block;
+        width: 663px;
+        height: 500px;
+        margin: 0 auto;
+      }
+    }
   }
 }
 
 @media (min-width: 1919px) {
   .find {
+    padding-top: 100px;
+    &__wrapperMap {
+      margin-top: 80px;
+      iframe {
+        width: 801px;
+        height: 604px;
+      }
+    }
   }
 }
